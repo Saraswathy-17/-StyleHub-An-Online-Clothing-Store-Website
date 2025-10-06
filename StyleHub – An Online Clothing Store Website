@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StyleHub – Online Clothing Store</title>
+<style>
+  * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+  body {background: #fff; overflow-x: hidden;}
+
+  /* Landing Page */
+  .landing {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .landing h1 {font-size: 3em; margin-bottom: 10px;}
+  .landing p {font-size: 1.2em; margin-bottom: 30px;}
+  .landing button {
+    background: white;
+    color: #ff758c;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .landing button:hover {
+    background: #ff527a;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  /* Shop Section */
+  #shop {
+    display: none;
+    animation: fadeIn 1s forwards;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  header {
+    background: #ff758c;
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {font-size: 1.8em;}
+  .search-bar input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .product {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .product:hover {transform: translateY(-5px);}
+  .product img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .product h3 {margin: 10px 0;}
+  .product p {font-size: 1.1em; font-weight: 500;}
+  .product button {
+    margin-top: 10px;
+    background: #ff758c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .product button:hover {background: #ff527a;}
+
+  footer {
+    background: #ff758c;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<!-- Landing Page -->
+<section class="landing" id="landing">
+  <h1>Welcome to StyleHub 👗</h1>
+  <p>Discover your style. Shop the latest trends at the best prices!</p>
+  <button onclick="openShop()">Shop Now</button>
+</section>
+
+<!-- Shop Section -->
+<section id="shop">
+  <header>
+    <h1>🛍 StyleHub</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products...">
+    </div>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="D:\web\Stylish T-Shirt.jpg" alt="T-Shirt">
+      <h3>Stylish T-Shirt</h3>
+      <p>₹599</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\Blue Jeans.jpg" alt="Jeans">
+      <h3>Blue Jeans</h3>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\Summer Top.jpg" alt="Top">
+      <h3>Summer Top</h3>
+      <p>₹749</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\shirt.jpg" alt="Shirt">
+      <h3>Formal Shirt</h3>
+      <p>₹899</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\Anarkali.jpg" alt="Anarkali">
+      <h3>Anarkali Dress</h3>
+      <p>₹1499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\Casual Hoodie.jpg" alt="Hoodie">
+      <h3>Casual Hoodie</h3>
+      <p>₹1199</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\Casual Jacket.jpg" alt="Jacket">
+      <h3>Casual Jacket</h3>
+      <p>₹1799</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\Leather jacket.jpg" alt="Leather Jacket">
+      <h3>Leather Jacket</h3>
+      <p>₹2499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\Party wear.jpg" alt="Party Wear">
+      <h3>Party Wear</h3>
+      <p>₹1899</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="D:\web\saree.jpg" alt="Saree">
+      <h3>Designer Saree</h3>
+      <p>₹1599</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 StyleHub | Designed with ❤ in India</p>
+  </footer>
+</section>
+
+<script>
+function openShop() {
+  document.getElementById("landing").style.display = "none";
+  document.getElementById("shop").style.display = "block";
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
